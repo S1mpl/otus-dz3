@@ -1,0 +1,21 @@
+spec:
+  template:
+    spec:
+      containers:
+        - name: controller
+          ports:
+            - name: http
+              hostPort: 80
+              containerPort: 80
+              protocol: TCP
+            - name: https
+              hostPort: 443
+              containerPort: 443
+              protocol: TCP
+            - name: webhook
+              containerPort: 8443
+              protocol: TCP
+            - name: metrics
+              hostPort: 10254
+              containerPort: 10254
+              protocol: TCP
