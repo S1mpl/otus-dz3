@@ -1,0 +1,27 @@
+apiVersion: v2
+name: dz3
+description: Otus dz3
+
+type: application
+version: 0.1.0
+appVersion: "1.16.0"
+
+dependencies:
+  - name: postgresql
+    version: 11.1.3
+    repository: https://charts.bitnami.com/bitnami
+    condition: postgresql.enabled
+    tags:
+      - myapp-database
+  - name: kube-prometheus
+    version: 8.1.2
+    repository: https://charts.bitnami.com/bitnami
+    condition: prometheus.enabled
+    tags:
+      - myapp-prometheus
+  - name: grafana
+    version: 8.2.2
+    repository: https://charts.bitnami.com/bitnami
+    condition: grafana.enabled
+    tags:
+      - myapp-grafana

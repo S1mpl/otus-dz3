@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: dz3-secret
+type: Opaque
+data:
+    DB_HOST: {{ (include "postgresql.fullname" .) | b64enc | quote }}
+    DB_PORT: {{ .Values.global.postgresql.service.port | b64enc | quote }}
+    DB_USER: {{ .Values.global.postgresql.auth.username | b64enc | quote }}
+    DB_PASSWORD: {{ .Values.global.postgresql.auth.password | b64enc | quote }}
+    DB_NAME: {{ .Values.global.postgresql.auth.database | b64enc | quote }}
