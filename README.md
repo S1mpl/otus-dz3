@@ -1,3 +1,3 @@
-helm install dz2 ./dz2
+helm install dz3 ./dz3
 
 все запросы в коллекции postman
