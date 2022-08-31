@@ -31,12 +31,10 @@
 					}
 				},
 				"url": {
-					"raw": "192.168.64.2/user",
+					"raw": "arch.homework/user",
 					"host": [
-						"192",
-						"168",
-						"64",
-						"2"
+						"arch",
+						"homework"
 					],
 					"path": [
 						"user"
@@ -62,12 +60,10 @@
 					}
 				],
 				"url": {
-					"raw": "192.168.64.2/user/1",
+					"raw": "arch.homework/user/1",
 					"host": [
-						"192",
-						"168",
-						"64",
-						"2"
+						"arch",
+						"homework"
 					],
 					"path": [
 						"user",
@@ -94,12 +90,10 @@
 					}
 				],
 				"url": {
-					"raw": "192.168.64.2/user/1",
+					"raw": "arch.homework/user/1",
 					"host": [
-						"192",
-						"168",
-						"64",
-						"2"
+						"arch",
+						"homework"
 					],
 					"path": [
 						"user",
@@ -111,9 +105,20 @@
 		},
 		{
 			"name": "Update User",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"host": true
+				}
+			},
 			"request": {
 				"method": "PUT",
-				"header": [],
+				"header": [
+					{
+						"key": "Host",
+						"value": "arch.homework",
+						"type": "default"
+					}
+				],
 				"body": {
 					"mode": "raw",
 					"raw": "{\n  \"firstName\": \"Julie\",\n  \"lastName\": \"Doe\",\n  \"email\": \"bestjohn@doe.com\",\n  \"phone\": \"+71004\"\n}",
@@ -124,16 +129,14 @@
 					}
 				},
 				"url": {
-					"raw": "192.168.64.2/user/2",
+					"raw": "arch.homework/user/3",
 					"host": [
-						"192",
-						"168",
-						"64",
-						"2"
+						"arch",
+						"homework"
 					],
 					"path": [
 						"user",
-						"2"
+						"3"
 					]
 				}
 			},
